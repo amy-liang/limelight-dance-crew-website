@@ -17,7 +17,7 @@ const HeaderContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     background-color: ${Colours.mainBlue};
 `
 
