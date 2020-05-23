@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 `
 
-export const Row = ({ className, children }) => (
+export const Column = ({ className, children }) => (
     <Container className={className}>
         {children}
     </Container>
