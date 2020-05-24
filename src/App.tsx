@@ -2,6 +2,7 @@ import * as React from "react";
 import {Home} from "./pages/Home";
 import {Header} from "./components/Header";
 import styled from 'styled-components';
+import { Footer } from "./components/Footer";
 
 const AppContainer = styled.div`
   background-color: #282c34;
@@ -18,6 +19,7 @@ function App() {
     <AppContainer>
         <Header/>
         <Home/>
+        <Footer/>
     </AppContainer>
   );
 }

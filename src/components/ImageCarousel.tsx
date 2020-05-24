@@ -58,8 +58,8 @@ export class ImageCarousel extends React.Component<IProps>{
                 return <a href={image.link} target={"_blank"} rel="noopener noreferrer">
                     <ImageContainer url={image.url}>
                         <ImageTextContainer>
-                            <Text text={image.title} color={Color.white}/>
-                            <Text text={image.subtitle} color={Color.white}/>
+                            <Text color={Color.white}>{image.title}</Text>
+                            <Text color={Color.white}>{image.subtitle}</Text>
                         </ImageTextContainer>
                 </ImageContainer></a>
             })}

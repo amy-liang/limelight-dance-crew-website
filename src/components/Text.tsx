@@ -11,46 +11,47 @@ const Paragraph = styled.p`
     letter-spacing: ${props => props.kerning}px;
     text-align: ${props => props.textAlign};
     line-height: ${props => props.lineHeight};
+    font-weight: ${props => props.weight};
 `
 
 interface IProps {
-    text: string,
     size?: number,
     color?: string,
     maxWidth?: number,
     padding?: number,
     kerning?: number,
-    align?: string;
-    lineHeight?: number;
-    // paddingLeft?: number,
-    // paddingRight?: number,
-    // paddingTop?: number,
-    // paddingBottom?: number,
+    align?: string,
+    lineHeight?: number,
+    className?: any,
 }
 
 export class Text extends React.Component<IProps> {
     render() {
-        const { color, text, size, maxWidth, padding, kerning, align, lineHeight } = this.props;
+        const { color, size, maxWidth, padding, kerning, align, lineHeight, className } = this.props;
 
-        let fontSize;
-        let letterSpacing = 0;
+        let fontSize, letterSpacing, weight = 0;
         switch(size) {
             case 1:
                 fontSize = 12;
+                weight = 400;
                 break;
             case 2:
                 fontSize = 16;
+                weight = 300;
                 break;
             case 3:
                 fontSize = 24;
                 letterSpacing = 6;
+                weight = 300;
                 break;
             case 4:
                 fontSize = 48;
                 letterSpacing = 10;
+                weight = 500;
                 break;
             default:
                 fontSize = 12;
+                weight = 300;
         }
 
         let paddingString = "0px";
@@ -70,8 +71,10 @@ export class Text extends React.Component<IProps> {
                 kerning={letterSpacing}
                 textAlign={align ? align : "auto"}
                 lineHeight={lineHeight ? lineHeight : "auto"}
+                weight={weight}
+                className={className}
             >
-            {text}
+            {this.props.children}
         </Paragraph>
     }
 }
