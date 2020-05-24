@@ -6,8 +6,14 @@ const Container = styled.div`
     flex-direction: column;
 `
 
-export const Column = ({ className, children }) => (
-    <Container className={className}>
-        {children}
-    </Container>
-);
+interface IProps {
+    className?: any
+}
+
+export class Column extends React.Component<IProps> {
+    render() {
+        return <Container className={this.props.className}>
+            {this.props.children}
+        </Container>
+    }
+}

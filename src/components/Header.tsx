@@ -18,6 +18,7 @@ const HeaderContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    z-index: 100;
     background-color: ${Colours.mainBlue};
 `
 

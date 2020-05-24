@@ -10,6 +10,7 @@ const AppContainer = styled.div`
   padding: 0;
   margin: 0;
   font-family: Montserrat;
+  overflow-x: hidden;
 `
 
 function App() {
