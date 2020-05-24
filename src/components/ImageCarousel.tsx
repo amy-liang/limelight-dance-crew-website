@@ -2,7 +2,7 @@ import * as React from "react";
 import {Column} from "./Column";
 import {Text} from "./Text";
 import styled from 'styled-components';
-import {Colours} from "../stores/Constants";
+import {Color} from "../stores/Constants";
 import {Row} from "./Row";
 
 const Container = styled(Row)`
@@ -58,8 +58,8 @@ export class ImageCarousel extends React.Component<IProps>{
                 return <a href={image.link} target={"_blank"} rel="noopener noreferrer">
                     <ImageContainer url={image.url}>
                         <ImageTextContainer>
-                            <Text text={image.title} color={Colours.white}/>
-                            <Text text={image.subtitle} color={Colours.white}/>
+                            <Text text={image.title} color={Color.white}/>
+                            <Text text={image.subtitle} color={Color.white}/>
                         </ImageTextContainer>
                 </ImageContainer></a>
             })}

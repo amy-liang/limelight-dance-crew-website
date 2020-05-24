@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from 'styled-components';
-import {Colours} from "../stores/Constants";
+import {Color} from "../stores/Constants";
 
 const Paragraph = styled.p`
     font-size: ${props => props.fontSize}px;
@@ -64,7 +64,7 @@ export class Text extends React.Component<IProps> {
 
         return <Paragraph
                 fontSize={fontSize}
-                color={color ? color : Colours.mainBlue}
+                color={color ? color : Color.mainBlue}
                 maxWidth={maxWidth}
                 padding={paddingString}
                 kerning={letterSpacing}

@@ -3,7 +3,7 @@ import {HeaderItem} from "./HeaderItem";
 import logo from "../logo.svg"
 import styled from 'styled-components';
 import {Row} from "./Row";
-import {Colours, Sizes} from "../stores/Constants";
+import {Color, Size} from "../stores/Constants";
 
 const HeaderLogo = styled.img`
     width: 80px;
@@ -12,14 +12,14 @@ const HeaderLogo = styled.img`
 
 const HeaderContainer = styled.div`
     width: 100vw;
-    height: ${Sizes.headerHeight}px;
+    height: ${Size.headerHeight}px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     position: fixed;
     z-index: 100;
-    background-color: ${Colours.mainBlue};
+    background-color: ${Color.mainBlue};
 `
 
 const HeaderItemContainer = styled(Row)`

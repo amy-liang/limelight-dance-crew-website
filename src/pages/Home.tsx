@@ -1,9 +1,10 @@
 import * as React from "react";
 import styled from 'styled-components';
-import {Colours} from "../stores/Constants";
+import {Color} from "../stores/Constants";
 import {Spacer} from "../components/Spacer";
 import {Text} from "../components/Text";
 import {ImageCarousel} from "../components/ImageCarousel";
+import {Button} from "../components/Button";
 
 const Container = styled.div`
     width: 100%;
@@ -18,7 +19,7 @@ const Section1 = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: ${Colours.mainBlue};
+    background-color: ${Color.mainBlue};
 `
 
 const Section2 = styled.div`
@@ -45,9 +46,9 @@ export class Home extends React.Component {
     render() {
         return <Container>
             <Section1>
-                <Text size={4} color={Colours.white} text={"LIMELIGHT DANCE CREW"}/>
+                <Text size={4} color={Color.white} text={"LIMELIGHT DANCE CREW"}/>
                 <Spacer height={24}/>
-                <Text size={3} color={Colours.white} text={"Based in Waterloo, Ontario"}/>
+                <Text size={3} color={Color.white} text={"Based in Waterloo, Ontario"}/>
             </Section1>
             <Section2>
                 <Text lineHeight={2} align={"center"} padding={36} maxWidth={400} size={2}
@@ -55,15 +56,15 @@ export class Home extends React.Component {
                     "Ontario, composed of passionate university students who love K-Pop and dancing. " +
                     "We film covers, hold free tutorials, and also do performances around the community." +
                     " We are always welcoming new Lemons of any skill level and background!"}/>
+                <Button text={"Dance With Us"} onClick={() => {}}/>
+                <Spacer height={32}/>
                 <ImageCarousel images={images}/>
                 <Spacer height={16}/>
                 <ImageCarousel images={images} offset={true}/>
                 <Spacer height={32}/>
             </Section2>
             <Section1>
-                <h1>LIMELIGHT DANCE CREW</h1>
-                <Spacer height={24}/>
-                <h2>Based in Waterloo, Ontario.</h2>
+                <Text size={3} text={"Our Team"} color={Color.white}/>
             </Section1>
         </Container>
     }
