@@ -1,19 +1,19 @@
 import * as React from "react";
-import styled from 'styled-components';
-import {Colors, Images} from "../stores/Constants";
-import {Spacer} from "../components/Spacer";
-import {Text} from "../components/Text";
-import {ImageCarousel} from "../components/ImageCarousel";
-import {Button} from "../components/Button";
-import {Column} from "../components/Column";
-import {ImageGallery} from "../components/ImageGallery";
+import styled from "styled-components";
+import { Colors, Images } from "../stores/Constants";
+import { Spacer } from "../components/Spacer";
+import { Text } from "../components/Text";
+import { ImageCarousel } from "../components/ImageCarousel";
+import { Button } from "../components/Button";
+import { Column } from "../components/Column";
+import { ImageGallery } from "../components/ImageGallery";
 import { Row } from "../components/Row";
 
 const Container = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-`
+`;
 
 const Section1 = styled.div`
     width: 100%;
@@ -27,7 +27,7 @@ const Section1 = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-`
+`;
 
 const Section2 = styled.div`
     width: 100%;
@@ -40,12 +40,12 @@ const Section2 = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: -50px;
-`
+`;
 
 const Section2Container = styled(Column)`
     align-items: flex-end;
     padding-right: 48px;
-`
+`;
 
 const Section3 = styled.div`
     width: 100%;
@@ -54,7 +54,7 @@ const Section3 = styled.div`
     align-items: flex-end;
     background-color: ${Colors.mainBlue};
     position: relative;
-`
+`;
 
 const SectionHeaderText = styled(Text)`
     transform: rotate(-90deg);
@@ -62,7 +62,7 @@ const SectionHeaderText = styled(Text)`
     left: -42px;
     top: 150px;
     text-transform: uppercase;
-`
+`;
 
 const catdog = {
     url: "http://i3.ytimg.com/vi/6vXI9gN4Z3k/hqdefault.jpg",
@@ -76,41 +76,59 @@ const images2 = [catdog, catdog, catdog, catdog, catdog, catdog, catdog];
 
 export class Home extends React.Component {
     render() {
-        return <Container>
-            <Section1>
-                <Text size={4} color={Colors.white}>LIMELIGHT DANCE CREW</Text>
-                <Spacer height={24}/>
-                <Text size={3} color={Colors.lightBlue}>Based in Waterloo, Ontario</Text>
-            </Section1>
-            <Section2>
-                <Spacer height={72}/>
-                <Section2Container>
-                    <SectionHeaderText size={3}>About Us</SectionHeaderText>
-                    <Text lineHeight={2} align={"right"} maxWidth={400} size={2}>
-                        Formed in 2016, Limelight is a dance crew based in Waterloo,
-                        Ontario, composed of passionate university students who love K-Pop and dancing.
-                        We film covers, hold free tutorials, and also do performances around the community.
-                        <br/>
-                        The crew is always welcoming new Lemons <br/>of any skill level and background!
+        return (
+            <Container>
+                <Section1>
+                    <Text size={4} color={Colors.white}>
+                        LIMELIGHT DANCE CREW
                     </Text>
-                    <Spacer height={32}/>
-                    <Button text={"Dance With Us"} onClick={() => {}}/>
-                    <Spacer height={72}/>
-                </Section2Container>
-                <ImageCarousel images={images}/>
-                <Spacer height={16}/>
-                <ImageCarousel images={images2} offset={true}/>
-                <Spacer height={72}/>
-            </Section2>
-            <Section3>
-                <Spacer height={72}/>
-                <SectionHeaderText size={3} color={Colors.white}>Our Team</SectionHeaderText>
-                <Row>
-                    <ImageGallery images={Images.execs} maxPerColumn={3}/>
-                    <Spacer width={54}/>
-                </Row>
-                <Spacer height={72}/>
-            </Section3>
-        </Container>
+                    <Spacer height={24} />
+                    <Text size={3} color={Colors.lightBlue}>
+                        Based in Waterloo, Ontario
+                    </Text>
+                </Section1>
+                <Section2>
+                    <Spacer height={72} />
+                    <Section2Container>
+                        <SectionHeaderText size={3}>About Us</SectionHeaderText>
+                        <Text size={3}>OPEN TO ALL</Text>
+                        <Spacer height={16} />
+                        <Text
+                            lineHeight={2}
+                            align={"right"}
+                            maxWidth={400}
+                            size={2}
+                        >
+                            Formed in 2016, Limelight is a dance crew based in
+                            Waterloo, Ontario, composed of passionate university
+                            students who love K-Pop and dancing. We film covers,
+                            hold free tutorials, and also do performances around
+                            the community.
+                            <br />
+                            The crew is always welcoming new Lemons <br />
+                            of any skill level and background!
+                        </Text>
+                        <Spacer height={32} />
+                        <Button text={"Dance With Us"} onClick={() => {}} />
+                        <Spacer height={72} />
+                    </Section2Container>
+                    <ImageCarousel images={images} />
+                    <Spacer height={16} />
+                    <ImageCarousel images={images2} offset={true} />
+                    <Spacer height={72} />
+                </Section2>
+                <Section3>
+                    <Spacer height={72} />
+                    <SectionHeaderText size={3} color={Colors.white}>
+                        Our Team
+                    </SectionHeaderText>
+                    <Row>
+                        <ImageGallery images={Images.execs} maxPerColumn={3} />
+                        <Spacer width={54} />
+                    </Row>
+                    <Spacer height={72} />
+                </Section3>
+            </Container>
+        );
     }
 }
