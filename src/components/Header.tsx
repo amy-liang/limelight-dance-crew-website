@@ -4,10 +4,12 @@ import logo from "../logo.svg"
 import styled from 'styled-components';
 import {Row} from "./Row";
 import {Colors, Dimensions} from "../stores/Constants";
+import { Link } from "react-router-dom"
 
 const HeaderLogo = styled.img`
     width: 80px;
     height: 80px;
+    margin-left: 10px;
 `
 
 const HeaderContainer = styled.div`
@@ -29,12 +31,12 @@ const HeaderItemContainer = styled(Row)`
 export class Header extends React.Component {
     render() {
         return <HeaderContainer>
-            <a href={"/"}><HeaderLogo src={logo}/></a>
+            <Link to={"/"}><HeaderLogo src={logo}/></Link>
             <HeaderItemContainer>
-                <HeaderItem title={"Videos"} link={""} active={false}/>
-                <HeaderItem title={"Membership"} link={""} active={false}/>
-                <HeaderItem title={"Shop"} link={""} active={false}/>
-                <HeaderItem title={"Locations"} link={""} active={false}/>
+                <HeaderItem title={"Videos"} link={"/videos"} active={false}/>
+                <HeaderItem title={"Membership"} link={"/membership"} active={false}/>
+                <HeaderItem title={"Schedule"} link={"/schedule"} active={false}/>
+                <HeaderItem title={"Contact"} link={"/contact"} active={false}/>
             </HeaderItemContainer>
         </HeaderContainer>
     }

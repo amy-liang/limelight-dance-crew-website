@@ -59,7 +59,7 @@ const Section3 = styled.div`
 const SectionHeaderText = styled(Text)`
     transform: rotate(-90deg);
     position: absolute;
-    left: -20px;
+    left: -42px;
     top: 150px;
     text-transform: uppercase;
 `

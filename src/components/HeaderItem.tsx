@@ -1,7 +1,8 @@
 import * as React from "react";
 import styled from 'styled-components';
-import {Column} from "./Column";
-import {Colors} from "../stores/Constants";
+import { Column } from "./Column";
+import { Colors } from "../stores/Constants";
+import { Link } from "react-router-dom"
 
 interface IProps {
     title: string,
@@ -31,7 +32,9 @@ const HeaderItemText = styled.p`
 export class HeaderItem extends React.Component<IProps>{
     render() {
         return <HeaderItemContainer>
-                <HeaderItemText>{this.props.title}</HeaderItemText>
+                <Link to={this.props.link}>
+                    <HeaderItemText>{this.props.title}</HeaderItemText>
+                </Link>
             </HeaderItemContainer>
     }
 }
