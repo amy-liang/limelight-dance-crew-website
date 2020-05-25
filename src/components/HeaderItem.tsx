@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from 'styled-components';
 import {Column} from "./Column";
-import {Color} from "../stores/Constants";
+import {Colors} from "../stores/Constants";
 
 interface IProps {
     title: string,
@@ -13,7 +13,7 @@ const HeaderItemContainer = styled(Column)`
     justify-content: center;
     padding: 16px 32px;
     cursor: pointer;
-    border-bottom: 1px ${Color.mainBlue} solid;
+    border-bottom: 1px ${Colors.mainBlue} solid;
     transition: all 0.4s ease-in-out;
     :hover {
         border-bottom: 1px #ffffff solid;

@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from 'styled-components';
-import {Color} from "../stores/Constants";
+import {Colors} from "../stores/Constants";
 
 const Container = styled.div`
     width: fit-content;
@@ -29,7 +29,7 @@ export class Button extends React.Component<IProps> {
     render() {
         const { text, onClick, color } = this.props;
 
-        return <Container onClick={onClick} color={color ? color : Color.mainBlue}>
+        return <Container onClick={onClick} color={color ? color : Colors.mainBlue}>
             <Paragraph>{text}</Paragraph>
         </Container>
     }

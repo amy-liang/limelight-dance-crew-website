@@ -2,8 +2,9 @@ import * as React from "react";
 import {Column} from "./Column";
 import {Text} from "./Text";
 import styled from 'styled-components';
-import {Color} from "../stores/Constants";
+import {Colors} from "../stores/Constants";
 import {Row} from "./Row";
+import {IImage} from "../stores/Interfaces";
 
 const ImageContainer = styled.div`
     width: 260px;
@@ -51,11 +52,7 @@ const ImageTextContainer = styled(Column)`
 `
 
 interface IProps {
-    images: {
-       url: string,
-       title: string,
-       subtitle: string,
-    }[],
+    images: IImage[],
     maxPerColumn?: number,
 }
 
@@ -85,8 +82,8 @@ export class ImageGallery extends React.Component<IProps>{
                     {imageRow.map((image, index) => {
                         return <ImageContainer url={image.url}>
                             <ImageTextContainer>
-                                <Text className={"title"} size={2} color={Color.white}>{image.title}</Text>
-                                <Text className={"subtitle"} size={2} color={Color.white}>{image.subtitle}</Text>
+                                <Text className={"title"} size={3} color={Colors.white}>{image.title}</Text>
+                                <Text className={"subtitle"} size={2} color={Colors.white}>{image.subtitle}</Text>
                             </ImageTextContainer>
                         </ImageContainer>
                     })}
