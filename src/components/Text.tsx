@@ -6,7 +6,7 @@ const Paragraph = styled.p`
     font-size: ${props => props.fontSize}px;
     color: ${props => props.color};
     ${props => (props.maxWidth ? `max-width: ${props.maxWidth}px;` : null)}
-    padding: ${props => props.padding};
+    padding: ${props => (props.padding ? props.padding : "0px")};
     margin: 0px;
     letter-spacing: ${props => props.kerning}px;
     text-align: ${props => props.textAlign};
@@ -18,7 +18,7 @@ interface IProps {
     size?: number;
     color?: string;
     maxWidth?: number;
-    padding?: number;
+    padding?: string;
     kerning?: number;
     align?: string;
     lineHeight?: number;
@@ -65,11 +65,6 @@ export class Text extends React.Component<IProps> {
                 weight = 300;
         }
 
-        let paddingString = "0px";
-        if (padding) {
-            paddingString = padding + "px";
-        }
-
         if (kerning) {
             letterSpacing = kerning;
         }
@@ -79,7 +74,7 @@ export class Text extends React.Component<IProps> {
                 fontSize={fontSize}
                 color={color ? color : Colors.blue1}
                 maxWidth={maxWidth}
-                padding={paddingString}
+                padding={padding}
                 kerning={letterSpacing}
                 textAlign={align ? align : "auto"}
                 lineHeight={lineHeight ? lineHeight : "auto"}

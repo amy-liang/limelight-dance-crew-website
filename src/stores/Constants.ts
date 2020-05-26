@@ -67,5 +67,6 @@ const exec6 = {
 export class Images {
     static banner: string = "https://i.imgur.com/Wlr40m0.jpg";
     static groupImage: string = "https://i.imgur.com/xQZ0uKj.jpg";
+    static victoriaParkPerformance: string = "https://i.imgur.com/CQR9hHB.jpg";
     static execs: IImage[] = [exec1, exec2, exec3, exec4, exec5, exec6];
 }

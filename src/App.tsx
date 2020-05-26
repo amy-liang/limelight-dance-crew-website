@@ -6,7 +6,7 @@ import { Footer } from "./components/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Videos } from "./pages/Videos";
 import { Membership } from "./pages/Membership";
-import { Schedule } from "./pages/Schedule";
+import { Tutorials } from "./pages/Tutorials";
 import { Contact } from "./pages/Contact";
 import { Colors } from "./stores/Constants";
 import { action, observable } from "mobx";
@@ -47,8 +47,8 @@ class App extends React.Component {
                         <Route path="/contact">
                             <Contact />
                         </Route>
-                        <Route path="/schedule">
-                            <Schedule />
+                        <Route path="/tutorials">
+                            <Tutorials />
                         </Route>
                         <Route path="/membership">
                             <Membership />

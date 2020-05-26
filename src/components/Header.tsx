@@ -59,8 +59,8 @@ export class Header extends React.Component {
                         active={false}
                     />
                     <HeaderItem
-                        title={"Schedule"}
-                        link={"/schedule"}
+                        title={"Tutorials"}
+                        link={"/tutorials"}
                         active={false}
                     />
                     <HeaderItem
