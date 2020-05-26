@@ -1,36 +1,47 @@
 import * as React from "react";
-import styled from 'styled-components';
-import {Colors} from "../stores/Constants";
+import styled from "styled-components";
+import { Colors } from "../stores/Constants";
 
 const Paragraph = styled.p`
     font-size: ${props => props.fontSize}px;
     color: ${props => props.color};
-    ${props => props.maxWidth ? `max-width: ${props.maxWidth}px;` : null}
+    ${props => (props.maxWidth ? `max-width: ${props.maxWidth}px;` : null)}
     padding: ${props => props.padding};
     margin: 0px;
     letter-spacing: ${props => props.kerning}px;
     text-align: ${props => props.textAlign};
     line-height: ${props => props.lineHeight};
     font-weight: ${props => props.weight};
-`
+`;
 
 interface IProps {
-    size?: number,
-    color?: string,
-    maxWidth?: number,
-    padding?: number,
-    kerning?: number,
-    align?: string,
-    lineHeight?: number,
-    className?: any,
+    size?: number;
+    color?: string;
+    maxWidth?: number;
+    padding?: number;
+    kerning?: number;
+    align?: string;
+    lineHeight?: number;
+    className?: any;
 }
 
 export class Text extends React.Component<IProps> {
     render() {
-        const { color, size, maxWidth, padding, kerning, align, lineHeight, className } = this.props;
+        const {
+            color,
+            size,
+            maxWidth,
+            padding,
+            kerning,
+            align,
+            lineHeight,
+            className
+        } = this.props;
 
-        let fontSize, letterSpacing, weight = 0;
-        switch(size) {
+        let fontSize,
+            letterSpacing,
+            weight = 0;
+        switch (size) {
             case 1:
                 fontSize = 12;
                 weight = 400;
@@ -63,9 +74,10 @@ export class Text extends React.Component<IProps> {
             letterSpacing = kerning;
         }
 
-        return <Paragraph
+        return (
+            <Paragraph
                 fontSize={fontSize}
-                color={color ? color : Colors.mainBlue}
+                color={color ? color : Colors.blue1}
                 maxWidth={maxWidth}
                 padding={paddingString}
                 kerning={letterSpacing}
@@ -74,7 +86,8 @@ export class Text extends React.Component<IProps> {
                 weight={weight}
                 className={className}
             >
-            {this.props.children}
-        </Paragraph>
+                {this.props.children}
+            </Paragraph>
+        );
     }
 }

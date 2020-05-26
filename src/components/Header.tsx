@@ -10,7 +10,6 @@ import { container } from "../inversify.config";
 import { GlobalStore } from "../stores/GlobalStore";
 import TYPES from "../stores/Types";
 import { observable } from "mobx";
-import { Text } from "./Text";
 
 const HeaderLogo = styled.img`
     width: 80px;
@@ -27,7 +26,10 @@ const HeaderContainer = styled.div`
     justify-content: space-between;
     position: fixed;
     z-index: 100;
-    background-color: ${Colors.mainBlue};
+    background-color: ${Colors.blue1};
+    transition: all 0.5s ease-in-out;
+    border-bottom: 0.5px solid
+        ${props => (props.showWhiteBorder ? Colors.blue3 : Colors.blue1)};
 `;
 
 const HeaderItemContainer = styled(Row)`
@@ -41,13 +43,10 @@ export class Header extends React.Component {
 
     render() {
         return (
-            <HeaderContainer>
+            <HeaderContainer showWhiteBorder={!this.globalStore.atScrollTop}>
                 <Link to={"/"}>
                     <HeaderLogo src={logo} />
                 </Link>
-                {this.globalStore.atScrollTop ? (
-                    <Text color={Colors.white}>BLAHHHH</Text>
-                ) : null}
                 <HeaderItemContainer>
                     <HeaderItem
                         title={"Videos"}

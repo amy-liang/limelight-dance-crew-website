@@ -1,6 +1,6 @@
 import * as React from "react";
-import styled from 'styled-components';
-import {Colors} from "../stores/Constants";
+import styled from "styled-components";
+import { Colors } from "../stores/Constants";
 
 const Container = styled.div`
     width: fit-content;
@@ -12,25 +12,27 @@ const Container = styled.div`
         background-color: ${props => props.color};
         color: white;
     }
-`
+`;
 
 const Paragraph = styled.p`
     text-transform: uppercase;
     letter-spacing: 2px;
-`
+`;
 
 interface IProps {
-    text: string,
-    onClick: () => void,
-    color?: string,
+    text: string;
+    onClick: () => void;
+    color?: string;
 }
 
 export class Button extends React.Component<IProps> {
     render() {
         const { text, onClick, color } = this.props;
 
-        return <Container onClick={onClick} color={color ? color : Colors.mainBlue}>
-            <Paragraph>{text}</Paragraph>
-        </Container>
+        return (
+            <Container onClick={onClick} color={color ? color : Colors.blue1}>
+                <Paragraph>{text}</Paragraph>
+            </Container>
+        );
     }
 }

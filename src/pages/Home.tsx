@@ -52,7 +52,7 @@ const Section3 = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    background-color: ${Colors.mainBlue};
+    background-color: ${Colors.blue1};
     position: relative;
 `;
 
