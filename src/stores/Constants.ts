@@ -1,11 +1,12 @@
 import { IImage } from "./Interfaces";
 
 export class Colors {
-    static blue1: string = "#0F1223";
+    static blue1: string = "#0f1223";
     static blue2: string = "#2A3149";
     static blue3: string = "#343d61";
     static lightBlue: string = "#99AEBC";
     static white: string = "#ffffff";
+    static transparentBlue1: string = "rgba(15,18,35,0.3)";
 }
 
 export class Dimensions {
