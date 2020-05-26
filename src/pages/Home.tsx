@@ -8,6 +8,7 @@ import { Button } from "../components/Button";
 import { Column } from "../components/Column";
 import { ImageGallery } from "../components/ImageGallery";
 import { Row } from "../components/Row";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
     width: 100%;
@@ -109,7 +110,9 @@ export class Home extends React.Component {
                             of any skill level and background!
                         </Text>
                         <Spacer height={32} />
-                        <Button text={"Dance With Us"} onClick={() => {}} />
+                        <Link to={"/membership"}>
+                            <Button text={"Dance With Us"} />
+                        </Link>
                         <Spacer height={72} />
                     </Section2Container>
                     <ImageCarousel images={images} />

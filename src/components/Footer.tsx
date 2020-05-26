@@ -1,10 +1,14 @@
 import * as React from "react";
 import { Text } from "./Text";
-import logo from "../logo.svg";
 import styled from "styled-components";
 import { Row } from "./Row";
-import { Colors, Dimensions } from "../stores/Constants";
-import { Column } from "./Column";
+import { Colors, Urls } from "../stores/Constants";
+import youtube from "../resources/youtube.svg";
+import instagram from "../resources/instagram.svg";
+import wechat from "../resources/wechat.svg";
+import facebook from "../resources/facebook.svg";
+import mail from "../resources/mail.svg";
+import { Link } from "react-router-dom";
 
 const FooterContainer = styled(Row)`
     padding: 32px;
@@ -15,6 +19,12 @@ const FooterContainer = styled(Row)`
     }
 `;
 
+const SocialMediaIcon = styled.img`
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+`;
+
 export class Footer extends React.Component {
     render() {
         return (
@@ -23,14 +33,29 @@ export class Footer extends React.Component {
                     Limelight Dance Crew Website &copy; 2020 Amy Liang
                 </Text>
                 <Row>
-                    <Text color={Colors.white}>
-                        Follow us on social media:{" "}
-                    </Text>
-                    <Text>Email</Text>
-                    <Text>Fb</Text>
-                    <Text>Ins</Text>
-                    <Text>YT</Text>
-                    <Text>WC</Text>
+                    <SocialMediaIcon src={mail} />
+                    <a
+                        href={Urls.limelightFacebook}
+                        target={"_blank"}
+                        rel={"noopener noreferrer"}
+                    >
+                        <SocialMediaIcon src={facebook} />
+                    </a>
+                    <a
+                        href={Urls.limelightInstagram}
+                        target={"_blank"}
+                        rel={"noopener noreferrer"}
+                    >
+                        <SocialMediaIcon src={instagram} />
+                    </a>
+                    <a
+                        href={Urls.limelightYoutube}
+                        target={"_blank"}
+                        rel={"noopener noreferrer"}
+                    >
+                        <SocialMediaIcon src={youtube} />
+                    </a>
+                    <SocialMediaIcon src={wechat} />
                 </Row>
             </FooterContainer>
         );

@@ -21,7 +21,7 @@ const Paragraph = styled.p`
 
 interface IProps {
     text: string;
-    onClick: () => void;
+    onClick?: () => void;
     color?: string;
 }
 

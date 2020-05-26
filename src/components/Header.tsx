@@ -1,6 +1,6 @@
 import * as React from "react";
 import { HeaderItem } from "./HeaderItem";
-import logo from "../logo.svg";
+import logo from "../resources/logo.svg";
 import styled from "styled-components";
 import { Row } from "./Row";
 import { Colors, Dimensions } from "../stores/Constants";

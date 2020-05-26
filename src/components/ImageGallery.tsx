@@ -16,21 +16,12 @@ const ImageContainer = styled.div`
     background-position: center;
     position: relative;
     cursor: pointer;
-    .title {
-        transition: all 0.2s ease-in-out;
-        opacity: 1;
+    :hover h3 {
+        transform: translateY(${props => (props.y ? props.y : -30)}px);
     }
-    .subtitle {
-        width: 100%;
-        position: absolute;
-        bottom: -60px;
-        transition: all 0.2s ease-in-out;
-        opacity: 0;
-    }
-    :hover .title {
-        opacity: 0;
-    }
-    :hover .subtitle {
+    :hover p {
+        transform: translateY(-30px);
+        transition-delay: 0.2s;
         opacity: 1;
     }
 `;
@@ -54,6 +45,18 @@ const Title = styled.h3`
     letter-spacing: 6px;
     text-transform: uppercase;
     position: absolute;
+    transition: all 0.2s ease-in-out;
+`;
+
+const Subtitle = styled.p`
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: -110px;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0s;
+    opacity: 0;
+    font-size: 18px;
 `;
 
 interface IProps {
@@ -89,19 +92,14 @@ export class ImageGallery extends React.Component<IProps> {
                     return (
                         <ImageRowContainer>
                             {imageRow.map((image, index) => {
+                                let y = image.subtitle.length > 25 ? -50 : -30;
                                 return (
-                                    <ImageContainer url={image.url}>
+                                    <ImageContainer y={y} url={image.url}>
                                         <ImageTextContainer>
-                                            <Title className={"title"}>
-                                                {image.title}
-                                            </Title>
-                                            <Text
-                                                className={"subtitle"}
-                                                size={2}
-                                                color={Colors.white}
-                                            >
+                                            <Title>{image.title}</Title>
+                                            <Subtitle>
                                                 {image.subtitle}
-                                            </Text>
+                                            </Subtitle>
                                         </ImageTextContainer>
                                     </ImageContainer>
                                 );

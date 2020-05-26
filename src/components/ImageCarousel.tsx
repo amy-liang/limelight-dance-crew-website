@@ -1,17 +1,17 @@
 import * as React from "react";
-import {Column} from "./Column";
-import {Text} from "./Text";
-import styled from 'styled-components';
-import {Colors} from "../stores/Constants";
-import {Row} from "./Row";
-import {IImage} from "../stores/Interfaces";
+import { Column } from "./Column";
+import { Text } from "./Text";
+import styled from "styled-components";
+import { Colors } from "../stores/Constants";
+import { Row } from "./Row";
+import { IImage } from "../stores/Interfaces";
 
 const Container = styled(Row)`
     width: 100%;
     height: fit-content;
-    ${props => props.offset ? `left: -140px;` : null}
+    ${props => (props.offset ? `left: -140px;` : null)}
     position: relative;
-`
+`;
 
 const ImageContainer = styled.div`
     width: 240px;
@@ -34,31 +34,44 @@ const ImageContainer = styled.div`
     :hover div {
         opacity: 1;
     }
-`
+`;
 
 const ImageTextContainer = styled(Column)`
     position: absolute;
     bottom: 10px;
     left: 10px;
-`
+`;
 
 interface IProps {
-    images: IImage[],
-    offset?: boolean,
+    images: IImage[];
+    offset?: boolean;
 }
 
-export class ImageCarousel extends React.Component<IProps>{
+export class ImageCarousel extends React.Component<IProps> {
     render() {
-        return <Container offset={this.props.offset}>
-            {this.props.images.map(image => {
-                return <a href={image.link} target={"_blank"} rel="noopener noreferrer">
-                    <ImageContainer url={image.url}>
-                        <ImageTextContainer>
-                            <Text color={Colors.white}>{image.title}</Text>
-                            <Text color={Colors.white}>{image.subtitle}</Text>
-                        </ImageTextContainer>
-                </ImageContainer></a>
-            })}
-        </Container>
+        return (
+            <Container offset={this.props.offset}>
+                {this.props.images.map(image => {
+                    return (
+                        <a
+                            href={image.link}
+                            target={"_blank"}
+                            rel="noopener noreferrer"
+                        >
+                            <ImageContainer url={image.url}>
+                                <ImageTextContainer>
+                                    <Text size={2} color={Colors.white}>
+                                        {image.title}
+                                    </Text>
+                                    <Text color={Colors.white}>
+                                        {image.subtitle}
+                                    </Text>
+                                </ImageTextContainer>
+                            </ImageContainer>
+                        </a>
+                    );
+                })}
+            </Container>
+        );
     }
 }
