@@ -6,12 +6,14 @@ const Container = styled.div`
     flex-direction: row;
     align-items: ${props => (props.alignItems ? props.alignItems : "auto")};
     padding: ${props => (props.padding ? props.padding : "0px")};
+    max-width: ${props => (props.maxWidth ? props.maxWidth + "px" : "inherit")};
 `;
 
 interface IProps {
     className?: any;
     padding?: string;
     verticalAlignment?: string;
+    maxWidth?: number;
 }
 
 export class Row extends React.Component<IProps> {
@@ -21,6 +23,7 @@ export class Row extends React.Component<IProps> {
                 className={this.props.className}
                 alignItems={this.props.verticalAlignment}
                 padding={this.props.padding}
+                maxWidth={this.props.maxWidth}
             >
                 {this.props.children}
             </Container>
