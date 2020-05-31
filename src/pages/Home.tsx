@@ -238,8 +238,8 @@ const sections = [
             <p>
                 Yes! Limelight holds executive team applications before the
                 beginning of every term (January, May, September). We have many
-                open positions for You do not have to be a member or University
-                of Waterloo student or member to apply"
+                open positions for those with experience in leading, marketing,
+                designing, filming, and more. Sign ups are currently: closed."
             </p>
         )
     },

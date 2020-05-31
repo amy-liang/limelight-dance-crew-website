@@ -11,8 +11,17 @@ export class YoutubeStore implements IYoutubeStore {
 
     @action
     fetchYoutubeVideos = async () => {
+        // Don't go over daily quota
+        if (this.videos.length > 0) {
+            return;
+        }
+
         const newVideos: IVideo[] = [];
-        let response = (await this.getYoutubeVideosRequest()).data;
+        let responseBody = await this.getYoutubeVideosRequest();
+        if (responseBody?.data == null) {
+            return;
+        }
+        let response = responseBody.data;
         let i = 0;
         let nextPageToken = "";
 
