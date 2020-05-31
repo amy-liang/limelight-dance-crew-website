@@ -30,12 +30,7 @@ class App extends React.Component {
 
     @action
     handleOnScroll = event => {
-        if (event.target.scrollTop !== 0) {
-            this.globalStore.atScrollTop = false;
-            console.log(this.globalStore.atScrollTop);
-        } else {
-            this.globalStore.atScrollTop = true;
-        }
+        this.globalStore.atScrollTop = event.target.scrollTop === 0;
     };
 
     render() {

@@ -1,5 +1,6 @@
 const TYPES = {
-    GlobalStore: Symbol("GlobalStore")
+    GlobalStore: Symbol("GlobalStore"),
+    YoutubeStore: Symbol("YoutubeStore")
 };
 
 export default TYPES;

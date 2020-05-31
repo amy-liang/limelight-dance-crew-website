@@ -10,6 +10,13 @@ import { ImageGallery } from "../components/ImageGallery";
 import { Row } from "../components/Row";
 import { Link } from "react-router-dom";
 import { TextSlider } from "../components/TextSlider";
+import { action, observable } from "mobx";
+import { GlobalStore } from "../stores/GlobalStore";
+import { container } from "../inversify.config";
+import TYPES from "../stores/Types";
+import { YoutubeStore } from "../stores/YoutubeStore";
+import { observer } from "mobx-react";
+import { Loading } from "../components/Loading";
 
 const Container = styled(Column)`
     width: 100%;
@@ -72,10 +79,25 @@ const catdog = {
     subtitle: "Aug 4, 2019"
 };
 
-const images = [catdog, catdog, catdog, catdog, catdog, catdog];
-const images2 = [catdog, catdog, catdog, catdog, catdog, catdog, catdog];
-
+@observer
 export class Home extends React.Component {
+    @observable
+    private youtubeStore: YoutubeStore = container.get(TYPES.YoutubeStore);
+
+    @observable
+    private isLoading: boolean = true;
+
+    @action
+    private setLoading = (loading: boolean) => {
+        this.isLoading = loading;
+    };
+
+    componentDidMount() {
+        this.youtubeStore
+            .fetchYoutubeVideos()
+            .then(() => this.setLoading(false));
+    }
+
     render() {
         return (
             <Container>
@@ -115,9 +137,36 @@ export class Home extends React.Component {
                         </Link>
                         <Spacer height={72} />
                     </Section2Container>
-                    <ImageCarousel images={images} />
-                    <Spacer height={16} />
-                    <ImageCarousel images={images2} offset={true} />
+                    {this.isLoading ? (
+                        <Loading />
+                    ) : (
+                        <React.Fragment>
+                            <ImageCarousel
+                                images={this.youtubeStore
+                                    .getVideosByIndex(0, 6)
+                                    .map(video => {
+                                        return {
+                                            url: video.thumbnail_url,
+                                            link: video.url,
+                                            title: video.title
+                                        };
+                                    })}
+                            />
+                            <Spacer height={16} />
+                            <ImageCarousel
+                                images={this.youtubeStore
+                                    .getVideosByIndex(6, 13)
+                                    .map(video => {
+                                        return {
+                                            url: video.thumbnail_url,
+                                            link: video.url,
+                                            title: video.title
+                                        };
+                                    })}
+                                offset={true}
+                            />
+                        </React.Fragment>
+                    )}
                     <Spacer height={72} />
                 </Section2>
                 <Section3>
