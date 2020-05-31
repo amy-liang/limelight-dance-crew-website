@@ -239,7 +239,7 @@ const sections = [
                 Yes! Limelight holds executive team applications before the
                 beginning of every term (January, May, September). We have many
                 open positions for those with experience in leading, marketing,
-                designing, filming, and more. Sign ups are currently: closed."
+                designing, filming, and more. Sign ups are currently: closed.
             </p>
         )
     },
