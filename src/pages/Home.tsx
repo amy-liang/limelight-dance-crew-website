@@ -142,7 +142,15 @@ export class Home extends React.Component {
                         Q&A
                     </SectionHeaderText>
                     <Row padding={"0 0 0 108px"} maxWidth={500}>
-                        <TextSlider sections={sections} />
+                        <Column>
+                            {sections.map(section => {
+                                return (
+                                    <TextSlider title={section.title}>
+                                        {section.paragraph}
+                                    </TextSlider>
+                                );
+                            })}
+                        </Column>
                     </Row>
                     <Spacer height={72} />
                 </Section4>
@@ -154,36 +162,73 @@ export class Home extends React.Component {
 const sections = [
     {
         title: "Does Limelight teach classes?",
-        paragraph:
-            "Yes! Limelight teaches tutorial classes every Friday at the University of Waterloo. For more information, check out our tutorial page"
+        paragraph: (
+            <p>
+                Yes! Limelight teaches tutorial classes every Friday at the
+                University of Waterloo. For more information, check out
+                our&nbsp;
+                <Link to={"/tutorials"}>tutorial page</Link>
+            </p>
+        )
     },
     {
         title: "How can I join a cover or performance?",
-        paragraph:
-            "Covers and performances are announced depending on the interest and availability of our members. Find out how to become a member here!"
+        paragraph: (
+            <p>
+                Covers and performances are announced depending on the interest
+                and availability of our members. Find out how to become a
+                member&nbsp;
+                <Link to={"membership"}>here</Link>!
+            </p>
+        )
     },
     {
         title:
             "Can I join as a social media manager / videographer / editor / makeup artist?",
-        paragraph:
-            "Yes! Limelight holds executive team applications before the beginning of every term (January, May, September). We have many open positions for You do not have to be a member or University of Waterloo student or member to apply"
+        paragraph: (
+            <p>
+                Yes! Limelight holds executive team applications before the
+                beginning of every term (January, May, September). We have many
+                open positions for You do not have to be a member or University
+                of Waterloo student or member to apply"
+            </p>
+        )
     },
     {
         title:
             "Can I join Limelight if I don't go to the University  of Waterloo?",
-        paragraph:
-            "You definitely can! Limelight is not officially affiliated with the University. Certain performances may have restrictions on member demographics, but that will be made clear in the sign up form."
+        paragraph: (
+            <p>
+                You definitely can! Limelight is not officially affiliated with
+                the University. Certain performances may have restrictions on
+                member demographics, but that will be made clear in the sign up
+                form.
+            </p>
+        )
     },
     {
         title:
             "How many practices happen in a week if I join a cover or performance?",
-        paragraph:
-            "Practice schedules are determined by the performance coordinator leading the cover/performance, but generally, you can expect around 2-3 practices per week (ranging in length from 1-3 hours)."
+        paragraph: (
+            <p>
+                Practice schedules are determined by the performance coordinator
+                leading the cover/performance, but generally, you can expect
+                around 2-3 practices per week (ranging in length from 1-3
+                hours).
+            </p>
+        )
     },
     {
         title:
             "I'm interested in joining this cover/performance, but I'm in 10 other clubs, have 3 midterms, and co-op interviews, what's the commitment level like?",
-        paragraph:
-            "Practice times are usually adjusted to fit the schedules of the participating members. However, in joining a cover or performance, you are expected to do your best to attend all practices possible. If you can't make a practice (for a valid reason), it's your responsibility to catch up!"
+        paragraph: (
+            <p>
+                Practice times are usually adjusted to fit the schedules of the
+                participating members. However, in joining a cover or
+                performance, you are expected to do your best to attend all
+                practices possible. If you can't make a practice (for a valid
+                reason), it's your responsibility to catch up!
+            </p>
+        )
     }
 ];

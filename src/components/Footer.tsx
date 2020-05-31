@@ -8,7 +8,6 @@ import instagram from "../resources/instagram.svg";
 import wechat from "../resources/wechat.svg";
 import facebook from "../resources/facebook.svg";
 import mail from "../resources/mail.svg";
-import { Link } from "react-router-dom";
 
 const FooterContainer = styled(Row)`
     padding: 32px;
