@@ -62,7 +62,7 @@ export class YoutubeStore implements IYoutubeStore {
                 "https://www.googleapis.com/youtube/v3/search",
                 {
                     params: {
-                        key: "AIzaSyCeYtU_q_3wdMEkpmZ3D22iOeFCzf_nrVQ",
+                        key: ${{ secrets.YOUTUBE_API_KEY }},
                         part: "snippet",
                         type: "video",
                         channelId: "UC40GdqVnIsD23o_5fYvy3dQ",
