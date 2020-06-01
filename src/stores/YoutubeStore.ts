@@ -38,8 +38,11 @@ export class YoutubeStore implements IYoutubeStore {
             };
             newVideos.push(video);
             if (i + 1 === parseInt(response.pageInfo.resultsPerPage, 10)) {
-                response = (await this.getYoutubeVideosRequest(nextPageToken))
-                    .data;
+                let responseBody = await this.getYoutubeVideosRequest(nextPageToken);
+                if (responseBody?.data == null) {
+                    break;
+                }
+                response = responseBody.data;
                 i = 0;
             }
             i++;

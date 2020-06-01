@@ -57,6 +57,7 @@ export class ImageCarousel extends React.Component<IProps> {
                             href={image.link}
                             target={"_blank"}
                             rel="noopener noreferrer"
+                            key={image.title}
                         >
                             <ImageContainer url={image.url}>
                                 <ImageTextContainer>

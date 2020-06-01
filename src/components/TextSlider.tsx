@@ -26,12 +26,10 @@ const Paragraph = styled(Text)`
     height: 100%;
     max-height: ${props => (props.isExpanded ? "300px" : "0px")};
     margin: 10px 0px;
+    line-height: 1.8;
     overflow: hidden;
-    * {
-        color: white;
-        line-height: 1.8;
-    }
     a {
+        color: white;
         text-decoration: underline;
     }
 `;

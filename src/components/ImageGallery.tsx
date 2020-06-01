@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Column } from "./Column";
-import { Text } from "./Text";
 import styled from "styled-components";
 import { Colors } from "../stores/Constants";
 import { Row } from "./Row";
@@ -88,13 +87,17 @@ export class ImageGallery extends React.Component<IProps> {
 
         return (
             <Column>
-                {imagesRender.map(imageRow => {
+                {imagesRender.map((imageRow, index) => {
                     return (
-                        <ImageRowContainer>
+                        <ImageRowContainer key={index}>
                             {imageRow.map((image, index) => {
                                 let y = image.subtitle.length > 25 ? -50 : -30;
                                 return (
-                                    <ImageContainer y={y} url={image.url}>
+                                    <ImageContainer
+                                        key={image.title}
+                                        y={y}
+                                        url={image.url}
+                                    >
                                         <ImageTextContainer>
                                             <Title>{image.title}</Title>
                                             <Subtitle>
