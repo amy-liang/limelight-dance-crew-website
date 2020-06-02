@@ -1,11 +1,11 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Column } from "./Column";
-import { Text } from "./Text";
+import { Column } from "./shared/Column";
+import { Text } from "./shared/Text";
 import { Colors } from "../stores/Constants";
 import { observer } from "mobx-react";
 import { action, observable } from "mobx";
-import { Row } from "./Row";
+import { Row } from "./shared/Row";
 import arrow from "../resources/arrow.svg";
 
 const Container = styled(Row)`

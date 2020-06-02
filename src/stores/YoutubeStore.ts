@@ -11,8 +11,12 @@ export class YoutubeStore implements IYoutubeStore {
 
     @action
     fetchYoutubeVideos = async () => {
-        // Don't go over daily quota
         if (this.videos.length > 0) {
+            return;
+        }
+        const localStorageVideos = localStorage.getItem('limelight_youtube_videos');
+        if (localStorageVideos != null) {
+            this.parseVideosFromLocalStorage(localStorageVideos);
             return;
         }
 
@@ -49,6 +53,7 @@ export class YoutubeStore implements IYoutubeStore {
         }
 
         this.videos = newVideos;
+        localStorage.setItem("limelight_youtube_videos", newVideos.toString());
     };
 
     getVideosByIndex = (startIndex: number, endIndex: number): IVideo[] => {
@@ -65,7 +70,7 @@ export class YoutubeStore implements IYoutubeStore {
                 "https://www.googleapis.com/youtube/v3/search",
                 {
                     params: {
-                        key: ${{ secrets.YOUTUBE_API_KEY }},
+                        key: "",
                         part: "snippet",
                         type: "video",
                         channelId: "UC40GdqVnIsD23o_5fYvy3dQ",
@@ -78,4 +83,8 @@ export class YoutubeStore implements IYoutubeStore {
             console.error(error);
         }
     };
+
+    private parseVideosFromLocalStorage = (localStorageVideos: string) => {
+        console.log(localStorageVideos);
+    }
 }

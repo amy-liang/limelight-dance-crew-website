@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import loading from "../resources/loading.svg";
+import loading from "../../resources/loading.svg";
 import { Column } from "./Column";
 
 const Container = styled(Column)`

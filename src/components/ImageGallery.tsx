@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Column } from "./Column";
+import { Column } from "./shared/Column";
 import styled from "styled-components";
 import { Colors } from "../stores/Constants";
-import { Row } from "./Row";
+import { Row } from "./shared/Row";
 import { IImage } from "../stores/Interfaces";
 
 const ImageContainer = styled.div`

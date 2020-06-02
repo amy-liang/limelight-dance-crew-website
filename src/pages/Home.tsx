@@ -1,13 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Colors, Images } from "../stores/Constants";
-import { Spacer } from "../components/Spacer";
-import { Text } from "../components/Text";
+import { Spacer } from "../components/shared/Spacer";
+import { Text } from "../components/shared/Text";
 import { ImageCarousel } from "../components/ImageCarousel";
-import { Button } from "../components/Button";
-import { Column } from "../components/Column";
+import { Button } from "../components/shared/Button";
+import { Column } from "../components/shared/Column";
 import { ImageGallery } from "../components/ImageGallery";
-import { Row } from "../components/Row";
+import { Row } from "../components/shared/Row";
 import { Link } from "react-router-dom";
 import { TextSlider } from "../components/TextSlider";
 import { action, observable } from "mobx";
@@ -15,7 +15,7 @@ import { container } from "../inversify.config";
 import TYPES from "../stores/Types";
 import { YoutubeStore } from "../stores/YoutubeStore";
 import { observer } from "mobx-react";
-import { Loading } from "../components/Loading";
+import { Loading } from "../components/shared/Loading";
 
 const Container = styled(Column)`
     width: 100%;

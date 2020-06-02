@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Colors } from "../stores/Constants";
+import { Colors } from "../../stores/Constants";
 
 const Paragraph = styled.p`
     font-size: ${props => props.fontSize}px;

@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Text } from "./Text";
+import { Text } from "./shared/Text";
 import styled from "styled-components";
-import { Row } from "./Row";
+import { Row } from "./shared/Row";
 import { Colors, Urls } from "../stores/Constants";
 import youtube from "../resources/youtube.svg";
 import instagram from "../resources/instagram.svg";

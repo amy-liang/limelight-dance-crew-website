@@ -2,7 +2,7 @@ import * as React from "react";
 import { HeaderItem } from "./HeaderItem";
 import logo from "../resources/logo.svg";
 import styled from "styled-components";
-import { Row } from "./Row";
+import { Row } from "./shared/Row";
 import { Colors, Dimensions } from "../stores/Constants";
 import { Link } from "react-router-dom";
 import { observer } from "mobx-react";

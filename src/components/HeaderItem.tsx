@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Column } from "./Column";
+import { Column } from "./shared/Column";
 import { Colors } from "../stores/Constants";
 import { Link } from "react-router-dom";
 

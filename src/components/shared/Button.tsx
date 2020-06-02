@@ -1,10 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Colors } from "../stores/Constants";
+import { Colors } from "../../stores/Constants";
 
 const Container = styled.div`
     width: fit-content;
-    padding: ${props => (props.small ? "0px 16px" : "12px 24px")};
+    padding: ${props => (props.small ? "10px 16px" : "12px 24px")};
     border: 1px solid ${props => props.color};
     cursor: pointer;
     transition: all 0.2s ease-in-out;
