@@ -14,7 +14,7 @@ import fireCracker from "../resources/fire-cracker.svg";
 import { Spacer } from "../components/shared/Spacer";
 
 const Container = styled.div`
-    margin-top: ${Dimensions.headerHeight}px;
+    padding-top: ${Dimensions.headerHeight}px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -22,13 +22,13 @@ const Container = styled.div`
 `;
 
 const Section1 = styled(Column)`
-    width: 50vw;
+    width: 60vw;
     height: 100vh;
     justify-content: center;
     position: absolute;
     background-color: ${Colors.blue1};
     > * {
-        padding-left: 36px;
+        margin-left: 36px;
     }
 `;
 
@@ -40,7 +40,7 @@ const Section1Image = styled.div`
     background-image: url("${Images.victoriaParkPerformance}");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 100px;
+    background-position: 150px;
 `;
 
 const StyledTitleText = styled(Text)`
@@ -49,7 +49,7 @@ const StyledTitleText = styled(Text)`
 
 const Section2 = styled(Row)`
     width: 100%;
-    padding: 16px 0;
+    padding: 32px 0;
     align-items: center;
     justify-content: space-between;
     background-color: ${Colors.lightBlue};
@@ -70,6 +70,20 @@ const Section4 = styled(Column)`
     }
 `;
 
+const Divider = styled.div`
+    margin-top: 20px;
+    width: 200px;
+    height: 1px;
+    background-color: ${Colors.white};
+`;
+
+const CurrentlySuspended = styled(Text)`
+    width: 100%;
+    padding: 32px 0px;
+    border: 1px solid ${Colors.white};
+    text-align: center;
+`;
+
 export class Membership extends React.Component {
     render() {
         return (
@@ -79,9 +93,16 @@ export class Membership extends React.Component {
                     <StyledTitleText size={4} color={Colors.white}>
                         MEMBERSHIP
                     </StyledTitleText>
+                    <Spacer height={16} />
                     <Text size={3} color={Colors.white}>
-                        Participate in our covers and performances!
+                        Join our covers and performances!
                     </Text>
+                    <Spacer height={16} />
+                    <Text color={Colors.white}>
+                        $7 before the beginning of term event. $10 afterwards.
+                    </Text>
+                    <Spacer height={80} />
+                    <Button text={"BUY NOW"} color={Colors.lightBlue} />
                 </Section1>
                 <Section2>
                     <Row verticalAlignment={"center"} padding={"0 0 0 36px"}>
@@ -149,28 +170,59 @@ export class Membership extends React.Component {
                     </Row>
                 </Section3>
                 <Section4>
-                    <Column padding={"0 36px"}>
-                        <Text size={3} color={Colors.white}>
-                            PERFORMANCES
-                        </Text>
-                        <Text>
-                            We perform at various community events around
-                            Waterloo region and the Toronto area
-                        </Text>
-                        <Text>Upcoming Performances:</Text>
-                        <Text>Seasonal Performances:</Text>
-                        <Row>
-                            <Column>
-                                <Text>Winter</Text>
-                            </Column>
-                            <Column>
-                                <Text>Spring</Text>
-                            </Column>
-                            <Column>
-                                <Text>Fall</Text>
-                            </Column>
-                        </Row>
-                    </Column>
+                    <Row verticalAlignment={"center"}>
+                        <Column padding={"0 36px"}>
+                            <Text size={3} color={Colors.white}>
+                                PERFORMANCES
+                            </Text>
+                            <Spacer height={20} />
+                            <Text size={2} maxWidth={480}>
+                                We perform at various community events around
+                                Waterloo region and the Toronto area
+                            </Text>
+                            <Divider />
+                            <Spacer height={48} />
+                            <Text size={2}>Upcoming Performances:</Text>
+                            <Spacer height={16} />
+                            <CurrentlySuspended>
+                                Currently suspended due to COVID-19
+                            </CurrentlySuspended>
+                            <Spacer height={32} />
+                            <Text size={2}>Seasonal Performances:</Text>
+                            <Spacer height={32} />
+                            <Row>
+                                <Column>
+                                    <Text size={2}>Winter</Text>
+                                    <Spacer height={8} />
+                                    <Text>Fashion for Change</Text>
+                                    <Text>Chinese New Year Gala</Text>
+                                </Column>
+                                <Spacer width={32} />
+                                <Column>
+                                    <Text size={2}>Spring</Text>
+                                    <Spacer height={8} />
+                                    <Text>Renison</Text>
+                                    <Text>Multicultural Festival</Text>
+                                    <Text>Changwon K-Pop World Festival</Text>
+                                </Column>
+                                <Spacer width={32} />
+                                <Column>
+                                    <Text size={2}>Fall</Text>
+                                    <Spacer height={8} />
+                                    <Text>Community</Text>
+                                </Column>
+                            </Row>
+                        </Column>
+                        <Spacer width={48} />
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/C69sWRbLlUw"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        />
+                    </Row>
                 </Section4>
             </Container>
         );

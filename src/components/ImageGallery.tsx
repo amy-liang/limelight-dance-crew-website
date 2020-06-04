@@ -51,7 +51,7 @@ const Subtitle = styled.p`
     color: white;
     width: 100%;
     position: absolute;
-    bottom: -110px;
+    bottom: -90px;
     transition: all 0.2s ease-in-out;
     transition-delay: 0s;
     opacity: 0;

@@ -18,7 +18,7 @@ import { observer } from "mobx-react";
 import { Loading } from "../components/shared/Loading";
 
 const Container = styled(Column)`
-    width: 100%;
+    overflow-x: hidden;
 `;
 
 const Section1 = styled(Column)`
@@ -42,6 +42,7 @@ const Section2 = styled(Column)`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: -50px;
+    overflow-x: hidden;
 `;
 
 const Section2Container = styled(Column)`

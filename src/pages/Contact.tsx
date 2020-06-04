@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Dimensions } from "../stores/Constants";
 
 const Container = styled.div`
-    margin-top: ${Dimensions.headerHeight}px;
+    padding-top: ${Dimensions.headerHeight}px;
     width: 100%;
     display: flex;
     flex-direction: column;

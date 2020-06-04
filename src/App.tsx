@@ -13,15 +13,14 @@ import { action, observable } from "mobx";
 import { GlobalStore } from "./stores/GlobalStore";
 import { container } from "./inversify.config";
 import TYPES from "./stores/Types";
+import ScrollToTop from "./components/ScrollToTop";
 
 const AppContainer = styled.div`
     background-color: ${Colors.white};
     height: 100vh;
-    width: 100vw;
     padding: 0;
     margin: 0;
     font-family: Montserrat;
-    overflow-x: hidden;
 `;
 
 class App extends React.Component {
@@ -37,25 +36,27 @@ class App extends React.Component {
         return (
             <AppContainer onScroll={this.handleOnScroll}>
                 <Router>
-                    <Header />
-                    <Switch>
-                        <Route path="/contact">
-                            <Contact />
-                        </Route>
-                        <Route path="/tutorials">
-                            <Tutorials />
-                        </Route>
-                        <Route path="/membership">
-                            <Membership />
-                        </Route>
-                        <Route path="/videos">
-                            <Videos />
-                        </Route>
-                        <Route path="/">
-                            <Home />
-                        </Route>
-                    </Switch>
-                    <Footer />
+                    <ScrollToTop>
+                        <Header />
+                        <Switch>
+                            <Route path="/contact">
+                                <Contact />
+                            </Route>
+                            <Route path="/tutorials">
+                                <Tutorials />
+                            </Route>
+                            <Route path="/membership">
+                                <Membership />
+                            </Route>
+                            <Route path="/videos">
+                                <Videos />
+                            </Route>
+                            <Route path="/">
+                                <Home />
+                            </Route>
+                        </Switch>
+                        <Footer />
+                    </ScrollToTop>
                 </Router>
             </AppContainer>
         );

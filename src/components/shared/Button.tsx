@@ -4,10 +4,11 @@ import { Colors } from "../../stores/Constants";
 
 const Container = styled.div`
     width: fit-content;
-    padding: ${props => (props.small ? "10px 16px" : "12px 24px")};
+    padding: ${props => (props.small ? "10px 16px" : "22px 36px")};
     border: 1px solid ${props => props.color};
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    color: ${props => props.color};
     :hover {
         background-color: ${props => props.color};
         color: white;

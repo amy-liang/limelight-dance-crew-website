@@ -1,6 +1,8 @@
 import { action, observable } from "mobx";
 import { injectable } from "inversify";
 import { IVideo, IYoutubeStore } from "./Interfaces";
+import {API_KEY} from "./APIKey";
+import {backupYoutubeVideos} from "./BackupCache";
 
 const MAX_VIDEOS = 12;
 
@@ -53,7 +55,7 @@ export class YoutubeStore implements IYoutubeStore {
         }
 
         this.videos = newVideos;
-        localStorage.setItem("limelight_youtube_videos", newVideos.toString());
+        localStorage.setItem("limelight_youtube_videos", newVideos.map(video => JSON.stringify(video)).toString());
     };
 
     getVideosByIndex = (startIndex: number, endIndex: number): IVideo[] => {
@@ -70,7 +72,7 @@ export class YoutubeStore implements IYoutubeStore {
                 "https://www.googleapis.com/youtube/v3/search",
                 {
                     params: {
-                        key: "",
+                        key: API_KEY,
                         part: "snippet",
                         type: "video",
                         channelId: "UC40GdqVnIsD23o_5fYvy3dQ",
@@ -81,10 +83,17 @@ export class YoutubeStore implements IYoutubeStore {
             );
         } catch (error) {
             console.error(error);
+            this.videos = backupYoutubeVideos;
         }
     };
 
+    @action
     private parseVideosFromLocalStorage = (localStorageVideos: string) => {
-        console.log(localStorageVideos);
+        const parsedVideos: IVideo[] = localStorageVideos.split("},")
+            .map((str, index) => {
+                if (index !== MAX_VIDEOS - 1) str = str.concat("}")
+                return JSON.parse(str)
+            });
+        this.videos = parsedVideos;
     }
 }
