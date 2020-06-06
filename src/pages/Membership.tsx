@@ -141,17 +141,17 @@ export class Membership extends React.Component {
                             title={"Learn the dance"}
                             number={2}
                         >
-                            A snippet of the dance to be covered is usually
-                            taught in one of our tutorial sessions (link to
-                            schedule). In cases where the timing does not work
-                            out, you may have to learn the dance by yourself!
+                            A snippet of the dance is usually taught in one of
+                            our <Link to={"/tutorials"}>tutorial sessions</Link>
+                            . In cases where the timing doesn't work out, you
+                            may have to learn the dance by yourself!
                         </MembershipPanel>
                         <MembershipPanel
                             icon={video}
                             title={"Send your audition video"}
                             number={3}
                         >
-                            Send your video via email to
+                            Send your dance video to
                             limelightdanceauditions@gmail.com, including your
                             name. Make sure you have purchased membership as
                             well!

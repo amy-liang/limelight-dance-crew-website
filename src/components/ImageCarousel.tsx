@@ -23,9 +23,9 @@ const ImageContainer = styled.div`
     background-position: center;
     position: relative;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.4s ease-in-out;
     :hover {
-        transform: scale(1.1);
+        transform: scale(1.07);
     }
     div {
         opacity: 0;
@@ -60,14 +60,7 @@ export class ImageCarousel extends React.Component<IProps> {
                             key={image.title}
                         >
                             <ImageContainer url={image.url}>
-                                <ImageTextContainer>
-                                    <Text size={2} color={Colors.white}>
-                                        {image.title}
-                                    </Text>
-                                    <Text color={Colors.white}>
-                                        {image.subtitle}
-                                    </Text>
-                                </ImageTextContainer>
+                                <ImageTextContainer />
                             </ImageContainer>
                         </a>
                     );

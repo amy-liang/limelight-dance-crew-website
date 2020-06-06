@@ -16,6 +16,9 @@ const Container = styled(Column)`
     min-height: 280px;
     word-break: break-word;
     position: relative;
+    * {
+        color: white;
+    }
 `;
 
 const FloatingNumber = styled.p`
