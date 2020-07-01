@@ -5,14 +5,15 @@ import { Colors } from "../stores/Constants";
 import { Row } from "./shared/Row";
 import { IImage } from "../stores/Interfaces";
 
+const Image = styled.img`
+    width: 100%;
+    height: 100%;
+`;
+
 const ImageContainer = styled.div`
     width: 260px;
     height: 260px;
     margin: 0 16px;
-    background-image: url("${props => props.url}");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     position: relative;
     cursor: pointer;
     :hover h3 {
@@ -68,7 +69,7 @@ export class ImageGallery extends React.Component<IProps> {
         const { images } = this.props;
 
         const imagesRender: {
-            url: string;
+            src: string;
             link: string;
             title: string;
             subtitle: string;
@@ -93,17 +94,14 @@ export class ImageGallery extends React.Component<IProps> {
                             {imageRow.map((image, index) => {
                                 let y = image.subtitle.length > 25 ? -50 : -30;
                                 return (
-                                    <ImageContainer
-                                        key={image.title}
-                                        y={y}
-                                        url={image.url}
-                                    >
+                                    <ImageContainer key={image.title} y={y}>
                                         <ImageTextContainer>
                                             <Title>{image.title}</Title>
                                             <Subtitle>
                                                 {image.subtitle}
                                             </Subtitle>
                                         </ImageTextContainer>
+                                        <Image src={image.src} />
                                     </ImageContainer>
                                 );
                             })}
