@@ -8,7 +8,14 @@
 
 ## About
 
-This website was created as a personal project for Limelight Dance Crew,
+This website was created as a personal project for Limelight Dance Crew, a Waterloo-based K-Pop Dance Cover team. This project was created from scratch, solely by myself, and has no intent on being used publically (for now). 
+
+## Coming soon
+
+- "Videos" page for browsing and searching through all Limelight content
+- "Tutorials" page to view information about our weekly tutorials and the upcoming schedule
+- "Contact" page to view contact information for curious dancers and business inquiries
+- Support for mobile
 
 ## Technologies Used
 - TypeScript: Used as the base language to build classes, scripts, and business logic.
