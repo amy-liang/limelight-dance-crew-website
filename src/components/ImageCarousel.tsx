@@ -1,8 +1,6 @@
 import * as React from "react";
 import { Column } from "./shared/Column";
-import { Text } from "./shared/Text";
 import styled from "styled-components";
-import { Colors } from "../stores/Constants";
 import { Row } from "./shared/Row";
 import { IImage } from "../stores/Interfaces";
 
