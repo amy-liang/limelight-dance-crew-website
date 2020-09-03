@@ -4,6 +4,8 @@
 
 # See the website live at https://amy-liang.github.io/limelight-dance-crew-website/
 
+![Screenshot](https://i.imgur.com/hUMzUSz.png)
+
 ## About
 
 This website was created as a personal project for Limelight Dance Crew,
