@@ -1,24 +1,19 @@
 import * as React from "react";
-import { Column } from "./shared/Column";
 import styled from "styled-components";
 import { Row } from "./shared/Row";
 import { IImage } from "../stores/Interfaces";
 
 const Container = styled(Row)`
     width: 100%;
-    height: fit-content;
     ${props => (props.offset ? `left: -140px;` : null)}
     position: relative;
 `;
 
-const ImageContainer = styled.div`
-    width: 240px;
-    height: 135px;
+const ImageContainer = styled.img`
+    width: 20vw;
+    height: 11vw;
+    object-fit: cover;
     margin: 0 8px;
-    background-image: url("${props => props.url}");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     position: relative;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
@@ -32,12 +27,6 @@ const ImageContainer = styled.div`
     :hover div {
         opacity: 1;
     }
-`;
-
-const ImageTextContainer = styled(Column)`
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
 `;
 
 interface IProps {
@@ -57,9 +46,7 @@ export class ImageCarousel extends React.Component<IProps> {
                             rel="noopener noreferrer"
                             key={image.title}
                         >
-                            <ImageContainer url={image.url}>
-                                <ImageTextContainer />
-                            </ImageContainer>
+                            <ImageContainer src={image.url} />
                         </a>
                     );
                 })}

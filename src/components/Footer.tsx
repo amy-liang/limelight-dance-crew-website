@@ -5,7 +5,6 @@ import { Row } from "./shared/Row";
 import { Colors, Urls } from "../stores/Constants";
 import youtube from "../resources/youtube.svg";
 import instagram from "../resources/instagram.svg";
-import wechat from "../resources/wechat.svg";
 import facebook from "../resources/facebook.svg";
 import mail from "../resources/mail.svg";
 
@@ -32,7 +31,9 @@ export class Footer extends React.Component {
                     Limelight Dance Crew Website &copy; 2020 Amy Liang
                 </Text>
                 <Row>
-                    <SocialMediaIcon src={mail} />
+                    <a href={"mailto:" + Urls.limelightEmail}>
+                        <SocialMediaIcon src={mail} />
+                    </a>
                     <a
                         href={Urls.limelightFacebook}
                         target={"_blank"}
@@ -54,7 +55,6 @@ export class Footer extends React.Component {
                     >
                         <SocialMediaIcon src={youtube} />
                     </a>
-                    <SocialMediaIcon src={wechat} />
                 </Row>
             </FooterContainer>
         );

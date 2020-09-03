@@ -26,6 +26,7 @@ export class Urls {
         "https://www.youtube.com/channel/UC40GdqVnIsD23o_5fYvy3dQ";
     static limelightInstagram: string =
         "https://www.instagram.com/limelight_dance_crew/";
+    static limelightEmail: string = "limelightmvcc@gmail.com";
 }
 
 const exec1 = {
@@ -49,7 +50,7 @@ const exec3 = {
 const exec4 = {
     src: julia,
     title: "Julia Pu",
-    subtitle: "Director, Videographer"
+    subtitle: "Director, Videographer, Editor"
 };
 
 const exec5 = {
