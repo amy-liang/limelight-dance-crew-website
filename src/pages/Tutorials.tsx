@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Colors, Dimensions } from "../stores/Constants";
 import { Spacer } from "../components/shared/Spacer";
 import { Text } from "../components/shared/Text";
-import { Button } from "../components/shared/Button";
 import { Column } from "../components/shared/Column";
 
 const Container = styled.div`
