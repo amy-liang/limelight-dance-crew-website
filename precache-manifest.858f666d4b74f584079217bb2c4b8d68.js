@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "280f4d0cfffe719435d341e8f9031247",
+    "revision": "6a46ce5b12574929c350b7996f7f0e75",
     "url": "/limelight-dance-crew-website/index.html"
   },
   {
-    "revision": "d11bcf788f25619ea59e",
+    "revision": "da57c6b7a058606d58db",
     "url": "/limelight-dance-crew-website/static/css/main.1e8af400.chunk.css"
   },
   {
-    "revision": "37af0fa69233a578c095",
-    "url": "/limelight-dance-crew-website/static/js/2.c51fd545.chunk.js"
+    "revision": "8af6b73f140b95a38ce0",
+    "url": "/limelight-dance-crew-website/static/js/2.b285871e.chunk.js"
   },
   {
     "revision": "7a1b1c873147cb270aea317adc60a8e4",
-    "url": "/limelight-dance-crew-website/static/js/2.c51fd545.chunk.js.LICENSE.txt"
+    "url": "/limelight-dance-crew-website/static/js/2.b285871e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d11bcf788f25619ea59e",
-    "url": "/limelight-dance-crew-website/static/js/main.c9803400.chunk.js"
+    "revision": "da57c6b7a058606d58db",
+    "url": "/limelight-dance-crew-website/static/js/main.90839915.chunk.js"
   },
   {
     "revision": "728be88a3620dba3d9d0",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/limelight-dance-crew-website/static/media/anlin.84578911.jpg"
   },
   {
-    "revision": "aafb8274544f743f80bc5098f1d23723",
-    "url": "/limelight-dance-crew-website/static/media/anna.aafb8274.jpg"
+    "revision": "0691afa62cda1342c44e57850f178e5f",
+    "url": "/limelight-dance-crew-website/static/media/anna.0691afa6.jpg"
   },
   {
     "revision": "bf879452eebc2b1678efd55735173878",
@@ -86,10 +86,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "60b08485cc957acee9edd74d4e7038e3",
     "url": "/limelight-dance-crew-website/static/media/video.60b08485.svg"
-  },
-  {
-    "revision": "c977c0058c03ab3126851e82309699c5",
-    "url": "/limelight-dance-crew-website/static/media/wechat.c977c005.svg"
   },
   {
     "revision": "3dc479f37995a835bd6905a26ad7ad3f",

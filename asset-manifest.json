@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/limelight-dance-crew-website/static/css/main.1e8af400.chunk.css",
-    "main.js": "/limelight-dance-crew-website/static/js/main.c9803400.chunk.js",
-    "main.js.map": "/limelight-dance-crew-website/static/js/main.c9803400.chunk.js.map",
+    "main.js": "/limelight-dance-crew-website/static/js/main.90839915.chunk.js",
+    "main.js.map": "/limelight-dance-crew-website/static/js/main.90839915.chunk.js.map",
     "runtime-main.js": "/limelight-dance-crew-website/static/js/runtime-main.7ffdf0f2.js",
     "runtime-main.js.map": "/limelight-dance-crew-website/static/js/runtime-main.7ffdf0f2.js.map",
-    "static/js/2.c51fd545.chunk.js": "/limelight-dance-crew-website/static/js/2.c51fd545.chunk.js",
-    "static/js/2.c51fd545.chunk.js.map": "/limelight-dance-crew-website/static/js/2.c51fd545.chunk.js.map",
+    "static/js/2.b285871e.chunk.js": "/limelight-dance-crew-website/static/js/2.b285871e.chunk.js",
+    "static/js/2.b285871e.chunk.js.map": "/limelight-dance-crew-website/static/js/2.b285871e.chunk.js.map",
     "index.html": "/limelight-dance-crew-website/index.html",
-    "precache-manifest.d532a667016f7e61fb8714cb8e15e667.js": "/limelight-dance-crew-website/precache-manifest.d532a667016f7e61fb8714cb8e15e667.js",
+    "precache-manifest.858f666d4b74f584079217bb2c4b8d68.js": "/limelight-dance-crew-website/precache-manifest.858f666d4b74f584079217bb2c4b8d68.js",
     "service-worker.js": "/limelight-dance-crew-website/service-worker.js",
     "static/css/main.1e8af400.chunk.css.map": "/limelight-dance-crew-website/static/css/main.1e8af400.chunk.css.map",
-    "static/js/2.c51fd545.chunk.js.LICENSE.txt": "/limelight-dance-crew-website/static/js/2.c51fd545.chunk.js.LICENSE.txt",
+    "static/js/2.b285871e.chunk.js.LICENSE.txt": "/limelight-dance-crew-website/static/js/2.b285871e.chunk.js.LICENSE.txt",
     "static/media/amy.jpg": "/limelight-dance-crew-website/static/media/amy.7a4291ed.jpg",
     "static/media/anlin.jpg": "/limelight-dance-crew-website/static/media/anlin.84578911.jpg",
-    "static/media/anna.jpg": "/limelight-dance-crew-website/static/media/anna.aafb8274.jpg",
+    "static/media/anna.jpg": "/limelight-dance-crew-website/static/media/anna.0691afa6.jpg",
     "static/media/announcement.svg": "/limelight-dance-crew-website/static/media/announcement.bf879452.svg",
     "static/media/arrow.svg": "/limelight-dance-crew-website/static/media/arrow.fd4cd95b.svg",
     "static/media/emily.jpg": "/limelight-dance-crew-website/static/media/emily.edd563ca.jpg",
@@ -28,13 +28,12 @@
     "static/media/logo.svg": "/limelight-dance-crew-website/static/media/logo.2cad6e2e.svg",
     "static/media/mail.svg": "/limelight-dance-crew-website/static/media/mail.19784b43.svg",
     "static/media/video.svg": "/limelight-dance-crew-website/static/media/video.60b08485.svg",
-    "static/media/wechat.svg": "/limelight-dance-crew-website/static/media/wechat.c977c005.svg",
     "static/media/youtube.svg": "/limelight-dance-crew-website/static/media/youtube.3dc479f3.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.7ffdf0f2.js",
-    "static/js/2.c51fd545.chunk.js",
+    "static/js/2.b285871e.chunk.js",
     "static/css/main.1e8af400.chunk.css",
-    "static/js/main.c9803400.chunk.js"
+    "static/js/main.90839915.chunk.js"
   ]
 }

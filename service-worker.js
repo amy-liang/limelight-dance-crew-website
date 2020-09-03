@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/limelight-dance-crew-website/precache-manifest.d532a667016f7e61fb8714cb8e15e667.js"
+  "/limelight-dance-crew-website/precache-manifest.858f666d4b74f584079217bb2c4b8d68.js"
 );
 
 self.addEventListener('message', (event) => {
