@@ -84,6 +84,24 @@ const CurrentlySuspended = styled(Text)`
     text-align: center;
 `;
 
+const IFrameContainer = styled.div`
+    position: relative;
+    width: 40vw;
+    overflow: hidden;
+    padding-top: 25%; /* 16:9 Aspect Ratio */
+`;
+
+const ResponsiveIFrame = styled.iframe`
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+`;
+
 export class Membership extends React.Component {
     render() {
         return (
@@ -125,7 +143,7 @@ export class Membership extends React.Component {
                         COVERS
                     </Text>
                     <Spacer height={36} />
-                    <Row>
+                    <Row horizontalAlignment={"center"}>
                         <Spacer width={36} />
                         <MembershipPanel
                             icon={announcement}
@@ -214,14 +232,13 @@ export class Membership extends React.Component {
                             </Row>
                         </Column>
                         <Spacer width={48} />
-                        <iframe
-                            width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/C69sWRbLlUw"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        />
+                        <IFrameContainer>
+                            <ResponsiveIFrame
+                                src="https://www.youtube.com/embed/C69sWRbLlUw"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            />
+                        </IFrameContainer>
                     </Row>
                 </Section4>
             </Container>

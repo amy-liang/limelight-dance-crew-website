@@ -14,6 +14,7 @@ const Container = styled(Column)`
     border: 1px solid white;
     width: 25%;
     min-height: 280px;
+    max-width: 300px;
     word-break: break-word;
     position: relative;
     * {

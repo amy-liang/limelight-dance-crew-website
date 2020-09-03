@@ -95,11 +95,15 @@ export class Home extends React.Component {
         return (
             <Container>
                 <Section1>
-                    <Text size={4} color={Colors.white}>
+                    <Text size={4} color={Colors.white} padding={"0 0 0 16px"}>
                         LIMELIGHT DANCE CREW
                     </Text>
                     <Spacer height={24} />
-                    <Text size={3} color={Colors.lightBlue}>
+                    <Text
+                        size={3}
+                        color={Colors.lightBlue}
+                        padding={"0 0 0 16px"}
+                    >
                         Based in Waterloo, Ontario
                     </Text>
                 </Section1>
